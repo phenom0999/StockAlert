@@ -3,6 +3,7 @@ import yfinance as yf
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+import os
 
 
 class stockalert():
@@ -37,8 +38,8 @@ class stockalert():
         return False
     
 def send_email(subject, body, to_email):
-    sender_email = "ayenamkhanal7@gmail.com"
-    app_password = "dcekoqezavmjjdes"
+    sender_email = os.getenv("EMAIL_USER")
+    app_password = os.getenv("EMAIL_PASS")
 
     msg = MIMEMultipart()
     msg["From"] = sender_email
