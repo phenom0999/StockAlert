@@ -31,7 +31,6 @@ class stockalert():
         return Rideal
 
     def alert(self):
-        return True
         Rideal = self.getIdealRforI(self.getI())
         R = self.getR()
         if R > Rideal:
