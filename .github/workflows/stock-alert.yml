@@ -2,10 +2,9 @@ name: Stock Alert
 
 on:
   schedule:
-    - cron: "30 0 * * *"   # 10:30 AM Sydney
+    - cron: "15 0 * * *"   # 10:30 AM Sydney
     - cron: "0 3 * * *"    # 1:00 PM Sydney
     - cron: "30 6 * * *"   # 4:30 PM Sydney
-    - cron: "43 10 * * *"   # 8:20 PM Sydney
   workflow_dispatch:        # allows manual run in GitHub
 
 jobs:
