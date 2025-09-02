@@ -59,7 +59,7 @@ def main():
     if s.alert():
         subject = "Stock Alert Triggered!"
         body = f"NDQ.AX hit the alert condition.\n\nR={s.getR()}, IdealR={s.getIdealRforI(s.getI()):.2f}, I={s.getI()}%"
-        send_email(subject, body, "ayenamkhanal7@gmail.com")
+        send_email(subject, body, os.getenv("EMAIL_USER"))
         print("Email sent.")
     else:
         print("✅ No alert.")
