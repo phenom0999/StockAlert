@@ -55,7 +55,7 @@ def send_email(subject, body, to_email):
 
 def main():
     datebuy = date(2025, 8, 11)
-    s = stockalert(76, 3652.99, datebuy)
+    s = stockalert(41, 1970.69, datebuy)
     if s.alert():
         subject = "Stock Alert Triggered!"
         body = f"NDQ.AX hit the alert condition.\n\nR={s.getR()}, IdealR={s.getIdealRforI(s.getI()):.2f}, I={s.getI()}%"
